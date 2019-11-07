@@ -8,7 +8,7 @@ class PlayerOne extends React.Component {
                 <br></br>
 <div>Player 1</div>
 <div>Name :{this.props.name}</div>
-<div>Player number of times : 0 <button onClick={(e)=>this.props.Buttonclick(e)}>{this.props.isplaying ? "This user is playing now" : "Play"}</button></div>
+<div>Player number of times :{this.props.times}<button onClick={(e)=>this.props.Buttonclick(e)}>{this.props.isplaying ? "This user is playing now" : "Play"}</button></div>
 </div>
         )
     }

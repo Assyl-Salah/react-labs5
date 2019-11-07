@@ -8,7 +8,8 @@ import PlayerTwo from './PlayerTwo'
         this.state={
             name1: '',
             name2: '',
-
+            score1:0 ,
+            score2:0,
             isactivePlayer1 : false,
             isactivePlayer2 : false
         };
@@ -30,14 +31,14 @@ button1click=(event)=>
 {
  if(!this.state.isactivePlayer1)
  {
-     this.setState({isactivePlayer1:true , isactivePlayer2:false});
+     this.setState({isactivePlayer1:true , isactivePlayer2:false , score1:this.state.score1 +1});
  }
 }
 button2click=(event)=>
 {
     if(!this.state.isactivePlayer2)
     {
-        this.setState({isactivePlayer2:true , isactivePlayer1:false});
+        this.setState({isactivePlayer2:true , isactivePlayer1:false , score2:this.state.score2 +1});
     }
 }
     render(){
@@ -46,15 +47,15 @@ button2click=(event)=>
         <fieldset>
     <PlayerOne name={this.state.name1} 
     isplaying={this.state.isactivePlayer1}
-    Buttonclick={this.button1click} />
+    Buttonclick={this.button1click}
+    times={this.state.score1} />
         </fieldset>
         <br></br>
-        <fieldset>
-            
+     <fieldset>     
     <PlayerTwo name={this.state.name2} 
     isplaying={this.state.isactivePlayer2}
     Buttonclick={this.button2click}
-    /> </fieldset>
+    times={this.state.score2}/> </fieldset>
     <br></br>
     <p> Set Name of Player One :
     <input 
