@@ -11,8 +11,8 @@ import PlayerTwo from './PlayerTwo'
             player1score : 0,
             player2score :0
         };
-    // this.name1handler.bind(this);
-     // this.name2handler.bind(this);
+    this.name1handler.bind(this);
+      this.name2handler.bind(this);
     }
 
 name1handler=(event)=>{
@@ -28,12 +28,12 @@ name2handler=(event)=>{
     return(
     <div className="clas1">
         <fieldset>
-    <PlayerOne />
+    <PlayerOne name={this.state.name1} />
         </fieldset>
         <br></br>
         <fieldset>
             
-    <PlayerTwo/> </fieldset>
+    <PlayerTwo name={this.state.name2}/> </fieldset>
     <br></br>
 
     <p> Set Name of Player One :

@@ -7,7 +7,7 @@ class PlayerTwo extends React.Component {
             <div>
                 <br></br>
 <div>Player 2</div>
-<div>Name : </div>
+<div>Name :{this.props.name}</div>
 <div>Player number of times : 0 <button>Play</button></div>
 </div>
             
