@@ -31,16 +31,19 @@ button1click=(event)=>
 {
  if(!this.state.isactivePlayer1)
  {
-     this.setState({isactivePlayer1:true , isactivePlayer2:false , score1:this.state.score1 +1});
+    this.setState((prevState=>
+        ({isactivePlayer1:true , isactivePlayer2:false , score1:prevState.score1 +1})));;
  }
 }
 button2click=(event)=>
 {
     if(!this.state.isactivePlayer2)
     {
-        this.setState({isactivePlayer2:true , isactivePlayer1:false , score2:this.state.score2 +1});
+        this.setState((prevState=>
+        ({isactivePlayer2:true , isactivePlayer1:false , score2:prevState.score2 +1})));
     }
 }
+
     render(){
     return(
     <div className="clas1">
